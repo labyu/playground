@@ -1,9 +1,8 @@
 package me.labyu.springddd.domain.user.api;
 
 import lombok.AllArgsConstructor;
-import me.labyu.springddd.domain.user.model.UserApplication;
+import me.labyu.springddd.domain.user.service.UserApplication;
 import me.labyu.springddd.domain.user.model.UserDto;
-import me.labyu.springddd.domain.user.model.UserService;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
