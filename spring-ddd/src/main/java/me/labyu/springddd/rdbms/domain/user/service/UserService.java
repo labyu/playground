@@ -1,8 +1,8 @@
-package me.labyu.springddd.domain.user.service;
+package me.labyu.springddd.rdbms.domain.user.service;
 
 import lombok.AllArgsConstructor;
-import me.labyu.springddd.domain.user.model.UserEmail;
-import me.labyu.springddd.domain.user.repository.UserRepository;
+import me.labyu.springddd.rdbms.domain.user.model.UserEmail;
+import me.labyu.springddd.rdbms.domain.user.repository.UserRepository;
 import org.springframework.stereotype.Service;
 
 @Service

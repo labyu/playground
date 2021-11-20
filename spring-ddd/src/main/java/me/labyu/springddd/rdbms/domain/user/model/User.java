@@ -1,8 +1,9 @@
-package me.labyu.springddd.domain.user.model;
+package me.labyu.springddd.rdbms.domain.user.model;
 
 import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
+import me.labyu.springddd.rdbms.domain.user.application.UserDto;
 
 import javax.persistence.*;
 
@@ -15,9 +16,11 @@ public class User {
     @Column(name = "user_id")
     private Long id;
 
+    @Column(nullable = false)
     @Convert(converter = UserEmail.PersistenceConverter.class)
     private UserEmail email;
 
+    @Column(nullable = false)
     @Convert(converter = UserName.PersistenceConverter.class)
     private UserName name;
 

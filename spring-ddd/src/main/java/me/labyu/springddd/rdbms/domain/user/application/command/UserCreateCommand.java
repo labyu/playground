@@ -1,4 +1,4 @@
-package me.labyu.springddd.domain.user.api;
+package me.labyu.springddd.rdbms.domain.user.application.command;
 
 import lombok.Getter;
 import lombok.NoArgsConstructor;

@@ -1,10 +1,10 @@
-package me.labyu.springddd.domain.user.service;
+package me.labyu.springddd.rdbms.domain.user.application;
 
 import lombok.AllArgsConstructor;
-import me.labyu.springddd.domain.user.api.UserCreateCommand;
-import me.labyu.springddd.domain.user.model.User;
-import me.labyu.springddd.domain.user.model.UserDto;
-import me.labyu.springddd.domain.user.repository.UserRepository;
+import me.labyu.springddd.rdbms.domain.user.application.command.UserCreateCommand;
+import me.labyu.springddd.rdbms.domain.user.model.User;
+import me.labyu.springddd.rdbms.domain.user.repository.UserRepository;
+import me.labyu.springddd.rdbms.domain.user.service.UserService;
 import org.springframework.stereotype.Service;
 
 @Service

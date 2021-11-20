@@ -1,7 +1,6 @@
-package me.labyu.springddd.domain.user.model;
+package me.labyu.springddd.rdbms.domain.user.model;
 
 import lombok.EqualsAndHashCode;
-import lombok.ToString;
 
 import javax.annotation.Nonnull;
 import javax.persistence.AttributeConverter;

@@ -1,4 +1,4 @@
-package me.labyu.springddd.domain.user.model;
+package me.labyu.springddd.rdbms.domain.user.model;
 
 import javax.annotation.Nonnull;
 import javax.persistence.AttributeConverter;

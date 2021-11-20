@@ -1,7 +1,7 @@
-package me.labyu.springddd.domain.user.repository;
+package me.labyu.springddd.rdbms.domain.user.repository;
 
-import me.labyu.springddd.domain.user.model.User;
-import me.labyu.springddd.domain.user.model.UserEmail;
+import me.labyu.springddd.rdbms.domain.user.model.User;
+import me.labyu.springddd.rdbms.domain.user.model.UserEmail;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.Optional;
