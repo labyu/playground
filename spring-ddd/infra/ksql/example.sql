@@ -1,6 +1,7 @@
 -- docker-compose exec ksql-cli ksql http://ksql-server:8088
 
 -- 0
+-- SET 'ksql.query.pull.table.scan.enabled' = 'true';
 SET 'auto.offset.reset' = 'earliest';
 
 --1

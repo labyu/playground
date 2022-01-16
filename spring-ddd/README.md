@@ -9,4 +9,18 @@ Spring에서 간략히 DDD 개념을 적용하고 Kafka를 이용해 CDC, Hetero
 
 실행방법
 
+```bash
+$ cd infra
 
+$ MySQL, KSQLDB, MongoDB 띄우기
+$ docker-compose up -d
+
+# Connector Setup
+$ ./setup-connect.sh
+$ ./monitor-connect.sh
+
+
+# ksql-cli 접속
+$ docker-compose exec ksql-cli ksql http://ksql-server:8088
+
+```
