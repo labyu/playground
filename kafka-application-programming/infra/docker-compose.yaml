@@ -1,0 +1,15 @@
+version: "3"
+
+services:
+  my-kafka-broker:
+    build:
+      context: ./
+      dockerfile: Dockerfile-KafkaBrokerServer
+    ports:
+      - "9092:9092"
+  my-kafka-cli:
+    build:
+      context: ./
+      dockerfile: Dockerfile-KafkaCLI
+    links:
+      - my-kafka-broker

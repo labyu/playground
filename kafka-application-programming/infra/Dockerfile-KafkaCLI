@@ -1,0 +1,15 @@
+FROM amazonlinux:2
+
+WORKDIR /kafka
+
+# Setup Init Packages
+RUN yum groupinstall -y "Development Tools"
+RUN yum install -y java-1.8.0-openjdk-devel.x86_64
+RUN java -version
+RUN yum install -y wget
+
+# Setup Kafka CLI
+RUN wget -O kafka.tgz https://archive.apache.org/dist/kafka/2.5.0/kafka_2.12-2.5.0.tgz
+RUN tar -xvf kafka.tgz
+
+CMD ["tail", "-f", "/dev/null"]

@@ -1,0 +1,26 @@
+FROM amazonlinux:2
+
+WORKDIR /kafka
+
+# Setup Init Packages
+RUN yum groupinstall -y "Development Tools"
+RUN yum install -y java-1.8.0-openjdk-devel.x86_64
+RUN java -version
+RUN yum install -y wget
+
+# Setup Kafka
+RUN wget https://archive.apache.org/dist/kafka/2.5.0/kafka_2.12-2.5.0.tgz
+RUN tar xvf kafka_2.12-2.5.0.tgz
+ENV KAFKA_HEAP_OPTS="-Xmx400m -Xms400m"
+
+
+# Execute Kafka Broker Server
+
+WORKDIR /kafka/kafka_2.12-2.5.0
+
+ARG KAFKA_BROKER_SERVER_PROPERTIES="/kafka/kafka-borker-server.properties"
+ENV KAFKA_BROKER_SERVER_PROPERTIES=${KAFKA_BROKER_SERVER_PROPERTIES}
+COPY kafka-borker-server.properties ${KAFKA_BROKER_SERVER_PROPERTIES}
+
+COPY kafka-broker-server-entrypoint.sh /kafka/kafka-broker-server-entrypoint.sh
+ENTRYPOINT ["/kafka/kafka-broker-server-entrypoint.sh"]
